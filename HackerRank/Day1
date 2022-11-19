@@ -1,0 +1,15 @@
+## 복습차원에서 해커랭크문제 하루에 두문제씩 풀기!
+
+
+
+Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA.
+*국가코드가 USA이고, 인구가 120000명이 넘는 도시 이름 필드 복사하기
+
+select name 
+from city
+where population>120000 and countrycode="USA"
+
+Query all columns (attributes) for every row in the CITY table.
+*모든 컬럼 복사하기
+select *
+from city
