@@ -1,0 +1,13 @@
+Query all columns for a city in CITY with the ID 1661.
+시티코드가 1661인 도시의 정보 추출
+
+select *
+from city
+where id=1661
+
+Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+나라가 일본인 정보 추출
+
+select *
+from city
+where countrycode='JPN'
