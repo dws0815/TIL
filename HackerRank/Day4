@@ -1,0 +1,20 @@
+Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+
+*짝수 id 번호를 가진 도시이름 프린트하기
+
+select city
+from station
+where id%2=0
+
+틀린이유:
+*중복값제거가 문제에 있었는데 하지않음
+
+select distinct(city)
+from station
+where id%2=0
+
+Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.
+*총 도시의 개수랑 중복값 제거 후 도시의 개수랑의 차이값 계산하기
+
+select count(city)-count(distinct(city))
+from station
