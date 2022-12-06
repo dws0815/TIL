@@ -1,0 +1,15 @@
+write a query to print the company_code, founder name, total number of lead managers, total number of senior managers, 
+total number of managers, and total number of employees. Order your output by ascending company_code.
+
+select e.company_code,c.founder,
+count(distinct e.lead_manager_code),
+count(distinct e.senior_manager_code),
+count(distinct e.manager_code),
+count(distinct e.employee_code)
+from company c inner join employee e on c.company_code=e.company_code
+group by e.company_code,founder
+order by c.company_code asc;
+
+처음 틀린이유:
+-distinct 기능을 오랜만에 사용하여 카운트 밖으로 표기함
+-정확도를 높히기 위해서는 그룹바이에 한개를 더 포함시키자
